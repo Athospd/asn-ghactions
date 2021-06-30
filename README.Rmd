@@ -1,5 +1,6 @@
 ---
-output: html_document
+output: github_document
+always_allow_html: true
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -13,7 +14,7 @@ knitr::opts_chunk$set(
 
 # asn-ghactions
 
-[Post original](https://rdrr.io/github/jbkunst/highcharter/src/dev/sandbox/quantmod-mega-ex.R)
+[Post original](https://plotly.com/r/candlestick-charts/)
 
 ```{r, message=FALSE, warning=FALSE, echo=FALSE}
 library(plotly)
