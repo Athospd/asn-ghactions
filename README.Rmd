@@ -1,0 +1,36 @@
+---
+output: html_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# asn-ghactions
+
+[Post original](https://rdrr.io/github/jbkunst/highcharter/src/dev/sandbox/quantmod-mega-ex.R)
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+library(plotly)
+library(quantmod)
+
+getSymbols("AAPL",src='yahoo')
+
+# basic example of ohlc charts
+df <- data.frame(Date=index(AAPL),coredata(AAPL))
+df <- tail(df, 30)
+
+fig <- df %>% plot_ly(x = ~Date, type="candlestick",
+          open = ~AAPL.Open, close = ~AAPL.Close,
+          high = ~AAPL.High, low = ~AAPL.Low) 
+fig <- fig %>% layout(title = "Basic Candlestick Chart")
+
+fig
+
+```
+
