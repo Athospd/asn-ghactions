@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 library(plotly)
 library(quantmod)
 
-2+2+2
+2+2+2+2
 
 getSymbols("AAPL",src='yahoo')
 
